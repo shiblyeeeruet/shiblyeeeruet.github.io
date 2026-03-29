@@ -20,6 +20,14 @@
     --white: #eaf4fb;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  .hero-photo {
+  width: 130px; height: 130px;
+  border-radius: 50%;
+  border: 2px solid var(--cyan);
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 30px rgba(56,180,220,0.2);
+}
   html { scroll-behavior: smooth; }
   body {
     background: var(--navy);
@@ -354,6 +362,7 @@
 <!-- HERO -->
 <div style="position:relative;z-index:1;">
 <section id="hero">
+  <img src="photo.jpg" alt="Imam Hossain Shibly" class="hero-photo"/>
   <p class="hero-eyebrow">Lecturer · Researcher · Engineer</p>
   <h1 class="hero-name">Imam Hossain<br/><em>Shibly</em></h1>
   <p class="hero-tagline">
