@@ -149,13 +149,32 @@
     .pub-num { display: none; }
     .about-grid { grid-template-columns: 1fr; }
   }
-  .yt-main {
+.yt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.yt-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  transition: border-color .25s;
+}
+.yt-card:hover { border-color: var(--cyan); }
+.yt-main {
   position: relative; width: 100%; padding-top: 56.25%;
-  background: var(--panel); border: 1px solid var(--border);
 }
 .yt-main iframe {
   position: absolute; inset: 0; width: 100%; height: 100%;
 }
+.yt-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .8rem 1rem;
+}
+.yt-link {
+  font-family: 'DM Mono', monospace; font-size: .7rem;
+  color: var(--cyan); text-decoration: none; letter-spacing: .05em;
+}
+.yt-link:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -355,26 +374,54 @@
     <p class="reveal" style="color:var(--muted);margin-bottom:2rem;font-size:.9rem;">
       Lecture videos published on the University of Scholars' official YouTube channel. New videos added regularly.
     </p>
-    <div class="reveal">
-      <div class="yt-main">
-        <iframe
-          src="https://www.youtube.com/embed/2hRRg4v07Ts?list=PLdJiYK7Nvb7rr4vMwww5rBk-E5EZQqaAl&rel=0"
-          title="EEE Lecture Playlist"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+    <div class="yt-grid reveal">
+
+      <div class="yt-card">
+        <div class="yt-main">
+          <iframe src="https://www.youtube.com/embed/2hRRg4v07Ts?list=PLdJiYK7Nvb7rr4vMwww5rBk-E5EZQqaAl&rel=0"
+            title="Playlist 1" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="yt-meta">
+          <div class="blog-tag">Microprocessor & Interfacing</div>
+          <a href="https://www.youtube.com/playlist?list=PLdJiYK7Nvb7rr4vMwww5rBk-E5EZQqaAl"
+             target="_blank" class="yt-link">▶ Open Playlist</a>
+        </div>
       </div>
-      <div style="margin-top:1.2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-        <a href="https://www.youtube.com/playlist?list=PLdJiYK7Nvb7rr4vMwww5rBk-E5EZQqaAl"
-           target="_blank" class="btn">▶ View Full Playlist on YouTube</a>
-        <span style="font-family:'DM Mono',monospace;font-size:.72rem;color:var(--muted);">
-          University of Scholars · EEE Department
-        </span>
+
+      <div class="yt-card">
+        <div class="yt-main">
+          <iframe src="https://www.youtube.com/embed/BRq5leIC2y4?list=PLdJiYK7Nvb7q15mOoi24I4nKsDGagcdQN&rel=0"
+            title="Playlist 2" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="yt-meta">
+          <div class="blog-tag">Digital Signal Processing</div>
+          <a href="https://www.youtube.com/playlist?list=PLdJiYK7Nvb7q15mOoi24I4nKsDGagcdQN"
+             target="_blank" class="yt-link">▶ Open Playlist</a>
+        </div>
       </div>
+
+      <div class="yt-card">
+        <div class="yt-main">
+          <iframe src="https://www.youtube.com/embed/UW1sxY1PTBs?list=PLdJiYK7Nvb7rdNjQ6ACGmk3-A2ojP74XQ&rel=0"
+            title="Playlist 3" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="yt-meta">
+          <div class="blog-tag">VLSI</div>
+          <a href="https://www.youtube.com/playlist?list=PLdJiYK7Nvb7rdNjQ6ACGmk3-A2ojP74XQ"
+             target="_blank" class="yt-link">▶ Open Playlist</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- CONTACT -->
 <section id="contact">
